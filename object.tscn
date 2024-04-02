@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwp6hqia02qnn"]
+
+[ext_resource type="Texture2D" uid="uid://bvdfptuku2mry" path="res://1X1 object.png" id="1_hdgba"]
+
+[sub_resource type="GDScript" id="GDScript_oysdv"]
+script/source = "extends CharacterBody2D
+
+@export var myText = \"cooltext01\"
+var textArr = []
+
+func _ready():
+	pass
+
+
+func _physics_process(delta):
+	z_index = global_position.y
+	
+	if Dialogic.VAR.get(\"pissVariable\") == \"Choice1\":
+		rotation += .1
+	if Dialogic.VAR.get(\"pissVariable\") == \"Choice2\":
+		rotation -= .1
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpp0l"]
+
+[node name="Node2D" type="CharacterBody2D" groups=["Object"]]
+script = SubResource("GDScript_oysdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Object"]]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_mpp0l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, -32)
+scale = Vector2(4, 4)
+texture = ExtResource("1_hdgba")

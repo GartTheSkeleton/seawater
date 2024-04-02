@@ -1,0 +1,8 @@
+join Chungus 1
+What do you think?
+- Yeah.
+	I disagree.
+	set {pissVariable} = "Choice1"
+- Nah.
+	I disagree even more than if you had answered 'Yeah".
+	set {pissVariable} = "Choice2"

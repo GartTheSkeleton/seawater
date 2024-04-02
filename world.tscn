@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cybw2j7ycfuhc"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_0j06s"]
+[ext_resource type="PackedScene" uid="uid://hgeskrjywfe" path="res://player.tscn" id="4_xm3n1"]
+
+[node name="World" type="Node2D" groups=["world"]]
+script = ExtResource("1_0j06s")
+metadata/_edit_vertical_guides_ = []
+
+[node name="Player" parent="." instance=ExtResource("4_xm3n1")]
+position = Vector2(8, 8)
